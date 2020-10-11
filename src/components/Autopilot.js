@@ -1,13 +1,12 @@
 import React from 'react';
 import IconAdd from '@material-ui/icons/Add'
 import IconRemove from '@material-ui/icons/Remove'
+import IconSync from '@material-ui/icons/Sync'
 
-import { ButtonGroup, HoldButton, ToggleButton } from "components/Button";
+import { Button, ButtonGroup, HoldButton, ToggleButton } from "components/Button";
 import { Value, Toggle, Actions, Content } from 'components/Value';
 import { useDebouncedValue } from 'components/useDebouncedValue';
 import { SectionHeader, Section, Block } from 'components/Section';
-
-
 
 export const Autopilot = ({ dispatchEvent, flightData }) => {
     const {
@@ -25,6 +24,10 @@ export const Autopilot = ({ dispatchEvent, flightData }) => {
         VerticalSpeed,
         VerticalSpeedHold
     } = flightData.Autopilot;
+
+    const { TrueHeading } = flightData;
+
+    console.log(TrueHeading);
 
     const [headingDir, setHeadingDir] = useDebouncedValue(HeadingDir);
     const [airspeed, setAirspeed] = useDebouncedValue(Airspeed);
@@ -114,6 +117,13 @@ export const Autopilot = ({ dispatchEvent, flightData }) => {
                     </Toggle>
                     <Content>Heading: { headingDir }</Content>
                     <Actions>
+                        <Button
+                            value={ headingDir }
+                            onClick={ () => dispatchEvent(`autopilot:headingSet:${Math.ceil(TrueHeading)}`) }
+                            type="round"
+                        >
+                            <IconSync />
+                        </Button>
                         <HoldButton
                             value={ headingDir }
                             onTick={ headingTick }
