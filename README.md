@@ -1,3 +1,5 @@
+# ! This is a work in progress, don't expect it to work (at all)
+
 # Setup
 
 - Install node (https://nodejs.org/en/, preferably LTS)
