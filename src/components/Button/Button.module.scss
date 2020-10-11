@@ -1,0 +1,41 @@
+@import "../vars";
+
+.button {
+    border: none;
+    border-radius: 3px;
+    background: $color-main-action;
+    color: #fff;
+    cursor: pointer;
+    height: 40px;
+    padding: 8px 16px;
+}
+
+.button.round {
+    border-radius: 20px;
+    padding: 8px;
+}
+
+.button.pressed {
+    background: #1a7ad2;
+    box-shadow: inset 0 2px 5px 0 #000;
+}
+
+.button:disabled {
+    background: #666;
+    cursor: not-allowed;
+}
+
+.buttonContent {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.buttonGroup {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 16px 0;
+}
+.buttonGroup .button+.button {
+    margin-left: 16px;
+}

@@ -1,0 +1,29 @@
+body {
+    background: #212121;
+    color: #fff;
+    font-family: Roboto, Arial, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3 {
+    margin: 8px 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 20px;
+    padding: 0 8px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

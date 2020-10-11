@@ -1,0 +1,30 @@
+.value {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+}
+
+.toggle {
+    flex: 0 0 auto;
+    margin-right: 16px;
+
+    button {
+        width: 70px;
+    }
+}
+
+.content {
+    flex: 1 1 100%;
+}
+
+.actions {
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    margin-left: 16px;
+
+    & > *+* {
+        margin-left: 8px;
+    }
+}

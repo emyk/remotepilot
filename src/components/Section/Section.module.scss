@@ -1,0 +1,16 @@
+.header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section {
+    flex: 0 0 auto;
+    border: 1px solid #ccc;
+    margin: 8px;
+    padding: 0 16px;
+}
+
+.block {
+    margin: 16px 0;
+}
